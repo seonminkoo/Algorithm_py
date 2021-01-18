@@ -1,8 +1,8 @@
 def solution(array, commands):
     """
-    return list(map(lambda x: sorted(array[x[0]-1:x[1]])[x[2]-1], commands)
+    return list(map(lambda x: sorted(array[x[0]-1:x[1]])[x[2]-1], commands))
     """
-
+    
     answer = []
 
     for c in commands:
@@ -10,10 +10,7 @@ def solution(array, commands):
         j = c[1]
         k = c[2] - 1
 
-        ar = array[i:j]
-        ar.sort()
-
-        answer.append(ar[k])
+        answer.append(sorted(array[i:j])[k])
 
     return answer
 
